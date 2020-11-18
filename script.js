@@ -39,23 +39,26 @@ function operate(operator, a, b) {
       break;
   }
 }
+//Selección de cifras por el usuario
+let numberArray = Array.from(document.querySelectorAll(".number"));
+let numberSelection = numberArray.forEach((obj) => {
+  obj.addEventListener("click", (e) => {
+    return e.target.value;
+  });
+});
 
-function displaySelection(e) {
-  let value = e.target.value;
-  console.log(value);
+//Selección de operador por el usuario
+let operatorArray = Array.from(document.querySelectorAll(".operator"));
+let operatorSelection = operatorArray.forEach((obj) => {
+  obj.addEventListener("click", (e) => {
+    return e.target.value;
+  });
+});
+
+function displaySelection(numberSelection, operatorSelection) {
   let operation = document.querySelector(".operation");
   operation.textContent += value;
 }
-
-let numberSelection = Array.from(document.querySelectorAll(".number"));
-numberSelection.forEach((obj) => {
-  obj.addEventListener("click", displaySelection);
-});
-
-let operatorSelection = Array.from(document.querySelectorAll(".operator"));
-operatorSelection.forEach((obj) => {
-  obj.addEventListener("click", displaySelection);
-});
 
 // function onClickEvent(e) {
 //   return e.target.value;
