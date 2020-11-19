@@ -36,6 +36,7 @@ h1 {
 .operation {
   align-self: flex-end;
   font-size: 1em;
+  min-height: 1em;
 }
 
 .result {
@@ -45,7 +46,8 @@ h1 {
 
 .number,
 .operator,
-.utility {
+.utility,
+.equals {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -62,7 +64,8 @@ button {
   background-color: lightgray;
 }
 
-.operator {
+.operator,
+.equals {
   background-color: rgb(207, 140, 53);
 }
 
